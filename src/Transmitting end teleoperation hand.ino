@@ -19,6 +19,7 @@ void setup() {
  Serial.begin(19200);
  radio.begin();
  radio.openWritingPipe(address);
+ radio.stopListening();
 }
 
 void SendingData(){
@@ -49,6 +50,8 @@ void SendingData(){
   }
 }
 void loop() {
-            radio.write(valsRec, sizeof(valsRec));
-            delay(5);
-}
+            SendingData();
+            for (int i = 0; i < 5; i = i + 1){
+            radio.write(valsRec[i], sizeof(valsRec[i]));
+            delay(5);}
+} 
