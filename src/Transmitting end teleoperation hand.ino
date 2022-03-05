@@ -16,7 +16,7 @@ String receivedString;
 //const uint64_t pipe = 0xE8E8F0F0E1LL;
 
 void setup() {
- Serial.begin(19200);
+ Serial.begin(9600);
  radio.begin();
  radio.openWritingPipe(address);
  radio.stopListening();
