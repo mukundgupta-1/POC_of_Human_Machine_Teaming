@@ -1,7 +1,7 @@
 import cv2
 from cvzone.HandTrackingModule import HandDetector
 from cvzone.SerialModule import SerialObject
-arduino = SerialObject("COM9")
+arduino = SerialObject("COM9",9600)
 
 cap = cv2.VideoCapture(0)
 detector = HandDetector(detectionCon=0.8, maxHands=2)
